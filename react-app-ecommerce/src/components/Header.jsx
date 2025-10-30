@@ -1,5 +1,7 @@
 import React from 'react';
 import '../index.css'
+import ShopLogo from '../assets/icons/ShopLogo';
+import Cart from '../assets/cart/Cart.jsx';
 
 const Header = () => {
   return (
@@ -8,7 +10,7 @@ const Header = () => {
             <p>Sign up and get 20% off to your first order, <a href="/src/auth/Login.jsx" className="text-blue-500">Sign Up Now</a>.</p>
         </div>
         <div className="header-content">
-            <img src="/SHOP.CO.jpg" className="w-25 h-5" />
+            <ShopLogo/>
             <div className="nav-bar">
                 <div>Shop</div>
                 <div>On Sale</div>
@@ -20,11 +22,10 @@ const Header = () => {
                 <input type="text" placeholder="Search for products..." />
             </div>
             <div className="cart-icon">
-                <img src="/Frame 5.jpg" alt="Cart" />
+                <Cart/>
             </div>
         </div>
     </div>
   );
 };
-
 export default Header;

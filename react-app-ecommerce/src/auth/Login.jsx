@@ -21,7 +21,7 @@ const Login = () => {
     try {
       const res = await postLogin(user).unwrap();
       console.log(res)
-      navigate('/', { replace: true });
+      navigate('/landingpage', { replace: true });
     } catch (error) {
       console.log('Login failed. Please check your credentials and try again.', error);
     }
@@ -51,5 +51,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
