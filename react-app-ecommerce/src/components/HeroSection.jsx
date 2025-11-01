@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
         </div>
       <div className="section-two">
-        <img src="/src/assets/Rectangle_2-removebg-preview-removebg-preview.png" alt="" />
+        <img src="/src/assets/Rectangle_2__1_-removebg-preview.png" alt="" />
       </div>
       <div>
         <Vector />

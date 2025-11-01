@@ -59,6 +59,9 @@ const AllProducts = () => {
       </div>
       <div className= "happy-customer">
         <h1> OUR HAPPY CUSTOMERS </h1>
+        <img src="/src/assets/arrow-down-bold 1.jpg" alt=""/>
+        <img src="/src/assets/arrow-down-bold 2.jpg" alt=""/>
+
           <div className="customer-reviews">
               <Star/>
               <img src="/src/assets/Frame 28.jpg" alt=""/>
