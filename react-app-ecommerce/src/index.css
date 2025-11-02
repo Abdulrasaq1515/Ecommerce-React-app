@@ -219,20 +219,50 @@ body {
   font-weight: 1000;
 }
 .dress {
-  justify-content:space-around;
   display: flex;
-  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
   padding: 20px;
-  gap: 10px;
-  width: 80%;
+  text-align: center;
 }
-.dressStyles-frame1 {
+
+.browse-style-card1 {
+  flex: 1 1 200px;
+  max-width: 250px;
   display: flex;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
 }
-.dressStyles-frame2 {
+.browse-style-card2 {
+  flex: 1 1 200px;
+  max-width: 250px;
   display: flex;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.browse-style-card1 img {
+  width: 700px;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.browse-style-card2 img {
+  width: 500px;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .browse-styles {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .happy-customer h1 {
@@ -250,7 +280,7 @@ body {
 
 .footer-banner {
   background-color: black;
-  width: 900px;
+  width: 1300px;
   height: 170px;
   color: white;
   display: flex;
@@ -261,7 +291,7 @@ body {
 
 .footer-banner h1 {
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 1000;
   margin-bottom: 15px;
 }
 
@@ -271,12 +301,15 @@ body {
   align-items: center;
   gap: 10px;
 }
+.email-logo {
+  backface-visibility: visible;
+}
 
 .footer-email-search input {
   background-color: #fff;
   padding: 10px;
   color: #000;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   max-width: 300px;
   border: none;
@@ -287,7 +320,7 @@ body {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
   font-weight: 600;
@@ -307,6 +340,10 @@ body {
 
 .footer-column {
   flex: 1 1 200px;
+  padding-bottom:20px ;
+}
+.shop-logo {
+  margin-bottom: 15px;
 }
 
 .footer-column .logo {
@@ -320,10 +357,16 @@ body {
   margin: 6px 0;
 }
 
-.social-icons span {
+.social-icons  {
   margin-right: 10px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
 }
 
 .footer-links {
@@ -360,15 +403,14 @@ body {
   font-size: 12px;
 }
 
-.payment-logos {
+.payment-logos .PaymentLogo {
   display: flex ;
   flex-direction: row ;
-  align-items: center;
   gap: 10px;
 }
 
 
-.payments svg{
+.Payment {
   display: flex;
   gap: 10px;
 }
@@ -383,10 +425,6 @@ body {
   }
 }
 
-.socials {
-  display: flex;
-  gap: 10px;
-}
 
 @media (max-width: 768px) {
   .footer-banner {
