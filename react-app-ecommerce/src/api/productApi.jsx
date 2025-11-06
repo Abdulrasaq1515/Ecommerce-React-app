@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-// Use VITE_BASE_URL and trim trailing slashes
 const baseUrl = (import.meta.env.VITE_BASE_URL ?? 'https://fakestoreapi.com/').replace(/\/+$/, '');
 
 export const productApi = createApi({
@@ -8,10 +7,12 @@ export const productApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({
-      // No leading slash when baseUrl is provided
       query: () => 'products',
+    }),
+    getProductById: builder.query({
+      query: (id) => `products/${id}`,
     }),
   }),
 });
 
-export const { useGetAllProductsQuery } = productApi;
+export const { useGetAllProductsQuery, useGetProductByIdQuery } = productApi;

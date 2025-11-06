@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { usePostLoginMutation } from '../api/loginApi';
+import styles from './login.module.css';
 
 const Login = () => {
   const [user, setUser] = useState({ username: '', password: '' });
@@ -20,7 +21,7 @@ const Login = () => {
     event.preventDefault();
     try {
       const res = await postLogin(user).unwrap();
-      console.log(res)
+      console.log(res);
       navigate('/landingpage', { replace: true });
     } catch (error) {
       console.log('Login failed. Please check your credentials and try again.', error);
@@ -28,27 +29,28 @@ const Login = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-4">Login</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Login</h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="username" className="block text-sm font-medium mb-1">Username</label>
-          <input id="username" name="username" type="text" value={user.username} onChange={handleChange} placeholder="username" className="w-full border rounded px-3 py-2" autoComplete="username"/>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.field}>
+          <label htmlFor="username" className={styles.label}>Username</label>
+          <input id="username" name="username" type="text" value={user.username} onChange={handleChange} placeholder="username" className={styles.input} autoComplete="username"/>
         </div>
-        <div>
-          <label htmlFor="password" className="block text-sm font-medium mb-1">Password</label>
-          <input id="password" name="password" type="password" value={user.password} onChange={handleChange} placeholder="password" className="w-full border rounded px-3 py-2" autoComplete="current-password"/>
+        <div className={styles.field}>
+          <label htmlFor="password" className={styles.label}>Password</label>
+          <input id="password" name="password" type="password" value={user.password} onChange={handleChange} placeholder="password" className={styles.input} autoComplete="current-password"/>
         </div>
 
         {isError && (
-          <p className="text-red-600 text-sm">Login failed. Please try again.</p>
+          <p className={styles.error}>Login failed. Please try again.</p>
         )}
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-60"
-          disabled={isLoading}>
-          {isLoading ? 'Logging in...' : 'Login'}</button>
+        <button type="submit" className={styles.submit} disabled={isLoading}>
+          {isLoading ? 'Logging in...' : 'Login'}
+        </button>
       </form>
     </div>
   );
 };
+
 export default Login;

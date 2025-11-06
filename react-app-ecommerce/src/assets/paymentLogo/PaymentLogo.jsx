@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from '../../pages/landingPage/landingPage.module.css';
 
 const PaymentLogo =()=> {
     return (
-        <div className="Payment">
-            <div className="visa">
+        <div className={styles["Payment"]}>
+            <div className={styles["visa"]}>
                 <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_dd_20_320)">
                     <rect x="9.18835" y="4.70605" width="46.6143" height="30.0304" rx="5.37857" fill="white"/>
@@ -28,7 +29,7 @@ const PaymentLogo =()=> {
                     </defs>
                 </svg>
             </div>
-            <div className="mastercard">
+            <div className={styles["mastercard"]}>
                 <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_dd_20_322)">
                     <rect x="9.18835" y="4.70605" width="46.6143" height="30.0304" rx="5.37857" fill="white"/>
@@ -56,7 +57,7 @@ const PaymentLogo =()=> {
                     </defs>
                 </svg>
             </div>
-            <div className="paypal">
+            <div className={styles["paypal"]}>
                     <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_dd_20_324)">
                         <rect x="9.18835" y="4.70605" width="46.6143" height="30.0304" rx="5.37857" fill="white"/>
@@ -82,7 +83,7 @@ const PaymentLogo =()=> {
                         </defs>
                     </svg>
             </div>
-            <div className="Gpay">
+            <div className={styles["Gpay"]}>
                 <svg width="65" height="49" viewBox="0 0 65 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_dd_20_328)">
                     <rect x="9.18835" y="4.70605" width="46.6143" height="30.0304" rx="5.37857" fill="white"/>

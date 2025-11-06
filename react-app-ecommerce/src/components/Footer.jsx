@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../pages/landingPage/landingPage.module.css';
 import EmailLogo from "../assets/emailLogo/EmailLogo.jsx";
 import ShopLogo from "../assets/icons/ShopLogo.jsx";
 import SocialIcon from "../assets/socialIcon/SocialIcon.jsx";
@@ -6,28 +7,28 @@ import PaymentLogo from "../assets/paymentLogo/PaymentLogo.jsx";
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="footer-banner">
+    <footer>
+            <div className={styles["footer-banner"]}>
                 <h1>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
-                <div className="footer-email-search">
+                <div className={styles["footer-email-search"]}>
                     <EmailLogo/>
                     <input type="text" placeholder="Enter your email address" />
                     <button>Subscribe to Newsletter</button>
                 </div>
             </div>
-            <div className="footer-main">
-                <div className="footer-column">
+            <div className={styles["footer-main"]}>
+                <div className={styles["footer-column"]}>
                     <ShopLogo/>
                     <p>
                         We have clothes that suit your style and keep you up to wear.
                         From women to men.
                     </p>
-                    <div className="social-icons">
+                    <div className={styles["social-icons"]}>
                         <SocialIcon/>
                     </div>
                 </div>
 
-                <div className="footer-links">
+                <div className={styles["footer-links"]}>
                     <div>
                         <h4>COMPANY</h4>
                         <p>About</p>
@@ -58,9 +59,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-bottom">
+            <div className={styles["footer-bottom"]}>
                 <p>Shop.co @ 2000-2023 All rights reserved.</p>
-                <div className="payment-logos">
+                <div className={styles["payment-logos"]}>
                     <PaymentLogo/>
                 </div>
             </div>

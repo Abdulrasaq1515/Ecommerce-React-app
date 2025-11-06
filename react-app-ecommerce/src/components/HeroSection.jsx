@@ -1,28 +1,33 @@
 import React from "react";
 import Vector from "../assets/vector/Vector.jsx";
+import styles from '../pages/landingPage/landingPage.module.css';
+
 
 const HeroSection = () => {
   return (
       <div>
-        <div className="hero-section">
-        <div className="section-one">
-          <div className="hero-text">
+        <div className={styles["hero-section"]}>
+        <div className={styles["section-one"]}>
+          <div className={styles["hero-text"]}>
             <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
           </div>
-          <div className="hero-description">
+          <div className={styles["hero-description"]}>
             <p>
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
               of style
             </p>
           </div>
-          <div className="hero-button">
+            {/*<div className= "vector">*/}
+            {/*    <Vector />*/}
+            {/*</div>*/}
+          <div className={styles["hero-button"]}>
             <button type="submit" className="bg-black text-white">
               {" "}
               Shop Now
             </button>
           </div>
-          <div className="hero-numbers-container">
+          <div className={styles["hero-numbers-container"]}>
             <div>
               <p>200+</p>
               <h6>International Brands</h6>
@@ -37,14 +42,14 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      <div className="section-two">
-        <img src="/src/assets/Rectangle_2__1_-removebg-preview.png" alt="" />
+      <div className={styles["section-two"]}>
+        <img src="/src/assets/image/Rectangle_2__1_-removebg-preview.png" alt="" />
       </div>
       <div>
         <Vector />
       </div>
     </div>
-    <div className="brands">
+    <div className={styles.brands}>
         <p>VERSACE</p>
         <p>ZARA</p>
         <p>GUCCI</p>

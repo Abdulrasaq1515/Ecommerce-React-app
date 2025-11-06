@@ -1,9 +1,9 @@
 import React from "react";
-import { createBrowserRouter } from "react-router";
-import ProductDetails from "../pages/ProductDetails";
-import CartPage from "../pages/CartPage";
+import { createBrowserRouter } from "react-router-dom";
+import ProductDetails from "../pages/productDetails/ProductDetails";
+import CartPage from "../pages/cart/CartPage.jsx";
 import CategoryPage from "../pages/CategoryPage";
-import LandingPage from "../pages/LandingPage";
+import LandingPage from "../pages/landingPage/LandingPage";
 import Login from "../auth/Login";
 import AllProducts from "../components/AllProducts.jsx";
 
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "/products",
         element : <AllProducts />
+    },
+    {
+        path: "/product/:id",
+        element: <ProductDetails />
     },
     {
         path: "/cart",
