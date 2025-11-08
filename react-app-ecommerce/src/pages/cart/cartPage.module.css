@@ -1,8 +1,11 @@
 
 .cart-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .loading-state {
@@ -26,8 +29,19 @@
 
 .cart-main {
     display: flex;
-    gap: 24px;
+    gap: 40px;
     align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .cart-main {
+        flex-direction: column;
+    }
+    
+    .cart-summary {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 .cart-item {
