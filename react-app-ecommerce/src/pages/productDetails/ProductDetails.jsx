@@ -6,8 +6,7 @@ import Footer from "../../components/Footer.jsx";
 import { useGetProductByIdQuery } from '../../api/productApi';
 import { addToCart } from '../../store/cartSlice';
 import styles from './productDetails.module.css';
-import Reviews from "../../assets/reviews/Reviews.jsx";
-import WriteReview from "../../assets/writeReview/WriteReview.jsx";
+import Reviews from "../../components/Reviews.jsx";
 
 const ProductDetails = () => {
         const { id } = useParams();
@@ -72,15 +71,12 @@ const ProductDetails = () => {
                         </main>
                         <div className={styles["rating"]}>
                             <h2>Products Details</h2>
-                            <h2>Rating & Reviews</h2>
+                                <h2>Product Information</h2>
                             <h2>FAQs</h2>
                         </div>
-                        <div className={styles["reviews-section"]}>
-                            <h2>All Reviews</h2>
-                            <WriteReview />
-                        </div>
                         <div>
-                            <Reviews/>
+                                <h2 className={styles["reviews-title"]}>Ratings & Reviews</h2>
+                            {product && <Reviews productId={product.id} />}
                         </div>
 
                         <Footer />

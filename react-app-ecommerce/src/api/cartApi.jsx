@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const baseUrl = (import.meta.env.VITE_BASE_URL ?? 'https://fakestoreapi.com/').replace(/\/+$/, '');
+const baseUrl = import.meta.env.VITE_BASE_URL ?? 'https://fakestoreapi.com/';
 
 export const cartApi = createApi({
   reducerPath: 'cartApi',
